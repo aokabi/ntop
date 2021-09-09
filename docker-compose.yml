@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8081:80"
+    volumes:
+      - type: bind
+        source: "nginx/conf.d"
+        target: "/etc/nginx/conf.d"
